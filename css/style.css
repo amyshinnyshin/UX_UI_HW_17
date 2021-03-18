@@ -1,0 +1,75 @@
+body {
+    font-family: 'Mukta Malar', sans-serif;
+  }
+/* Navigation CSS */
+#navBar {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 1%;
+    position: sticky;
+}
+#navBar h1 {
+    width: 50%;
+    font-weight: bolder;
+    padding-left: 5%;
+}
+h1 {
+    font: 'Apentura';
+    font-weight: bold;
+    font-size: 40px;
+    color: #546C9E;
+}
+#navigation {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 1%;
+    right: auto;
+}
+/* Grid CSS */
+#intro {
+    font: 'Spartan';
+    font-weight: lighter;
+    font-size: larger;
+}
+#name {
+    font: 'Spartan';
+    font-weight: bold;
+    font-size: 40px;
+}
+#heroGrid {
+    margin: 0px 5%;
+    display: grid;
+    min-height: 650px;
+    height: 70vh;
+    grid-template-rows: 65% 35%;
+    grid-template-columns: 65% 35%;
+    grid-template-areas: 
+    "heroImg content" 
+    "heroImg content";
+    padding: 1%;
+    float: center;
+    position: center;
+}
+#heroImg {
+    grid-area: heroImg;
+}
+img {
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content {
+    grid-area: content;
+}
+footer {
+   background-color: #373738; 
+   padding: 5%;
+   position: bottom;
+}
+#footer p {
+    text-align: left;
+    color: white;
+}
