@@ -1,75 +1,89 @@
-body {
-    font-family: 'Mukta Malar', sans-serif;
-  }
 /* Navigation CSS */
-#navBar {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 1%;
-    position: sticky;
-}
-#navBar h1 {
-    width: 50%;
-    font-weight: bolder;
-    padding-left: 5%;
-}
-h1 {
-    font: 'Apentura';
-    font-weight: bold;
-    font-size: 40px;
-    color: #546C9E;
-}
-#navigation {
-    display: flex;
-    width: 50%;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-right: 1%;
-    right: auto;
-}
+/* Body CSS */
 /* Grid CSS */
-#intro {
-    font: 'Spartan';
-    font-weight: lighter;
-    font-size: larger;
-}
-#name {
-    font: 'Spartan';
-    font-weight: bold;
-    font-size: 40px;
-}
-#heroGrid {
+#categoryGrid {
     margin: 0px 5%;
     display: grid;
-    min-height: 650px;
-    height: 70vh;
-    grid-template-rows: 65% 35%;
-    grid-template-columns: 65% 35%;
-    grid-template-areas: 
-    "heroImg content" 
-    "heroImg content";
-    padding: 1%;
-    float: center;
-    position: center;
+    padding-top: 4%;
+    padding-right: 4%;
+    padding-left: 4%;
+    grid-gap: 15px;
+    grid-template-rows: 125px 100px 25px 25px 75px 150px 125px;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    grid-template-areas:
+    "menu usda harvest"
+    "menu usda harvest"
+    "menu usda harvest"
+    "menu usda harvest"
+    "brand usda artRoom"
+    "brand portier artRoom"
+    "logo portier artRoom";
+  }
+  
+  #menu {
+    grid-area: menu;
+    font-family: 'Neufreit';
+    font-size: 36px;
+    text-decoration: none;
+    color:black;
+  }
+  #brand{
+    grid-area: brand;
+    align-content: top;
+  }
+  
+  #logo {
+    grid-area: logo;
+    align-content: end;
+    font-family: 'Neufreit';
+    font-size: 72px;
+  }
+  
+  #usda {
+    grid-area: usda;
+    background-image: url("../images/usda.png");
+  }
+  
+  #harvest {
+    grid-area: harvest;
+    background-image: url("../images/harvestapp.png");
+  }
+
+  #portier {
+    grid-area: portier;
+    background-image: url("../images/portierapp.png");
+  }
+
+  #artRoom {
+    grid-area: artRoom;
+    background-image: url("../images/artRoom.png");
+  }
+  .categoryGridArea {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: grid;
+  }
+/* Footer CSS */
+.footer {
+   padding-top: 1%;
+   padding-bottom: 3%;
+   padding-right: 2%;
+   padding-left: 72%;
+   display: grid;
+   position: absolute;
+   grid-template-columns: 2fr .5fr .5fr .5fr;
+   grid-template-rows: 20px 20px
 }
-#heroImg {
-    grid-area: heroImg;
+.grid-item p{
+    text-align: right;
+    color: #363636;
+    font-family: 'Spartan';
+    font-size: 16px;
 }
-img {
-    width: 65%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-#content {
-    grid-area: content;
-}
-footer {
-   background-color: #373738; 
-   padding: 5%;
-   position: bottom;
-}
-#footer p {
-    text-align: left;
-    color: white;
+
+.grid-item {
+  padding: 15px;
+  justify-self: flex-start;
 }
