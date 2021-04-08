@@ -1,4 +1,90 @@
+
 /* Navigation CSS */
+.menuOption {
+  margin: 0px 5%;
+  padding: 4%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 2; 
+  display: block;
+  text-decoration: none;
+  font-family: 'Neufreit';
+  font-size: 36px;
+  color: #000000;/* Sit on top */
+  cursor: pointer;
+}
+
+#menu {
+  float: left;
+}
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgb(27, 27, 27); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-contentTabs {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.overlay-contentTabs a:hover, a:focus {
+  color: #414141;
+}
+
+  
+/* The navigation links inside the overlay */
+.menuText {
+  font-family: 'Neufreit';
+  color: rgb(255, 255, 255);
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.contact {
+  font-family: 'Neufreit';
+  color: #8DA7E0;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+.overlay a {
+  padding: 20px;
+  text-decoration: none;
+  font-size: 100px;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  margin: 0px 5%;
+  padding: 4.5%;
+  font-family: 'Neufreit';
+  font-size: 36px;
+  color: white;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
 /* Body CSS */
 /* Grid CSS */
 #categoryGrid {
@@ -20,7 +106,7 @@
     "logo portier artRoom";
   }
   
-  #menu {
+  #menuOption {
     grid-area: menu;
     font-family: 'Neufreit';
     font-size: 36px;
@@ -30,33 +116,100 @@
   #brand{
     grid-area: brand;
     align-content: top;
+    animation-name: brandFrames;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
   }
-  
+  @keyframes brandFrames{
+    0% {opacity: 0%;}
+    25% {opacity: 25%;}
+    50% {opacity: 50%;}
+    100% {opacity: 100%;}
+  }
+
   #logo {
     grid-area: logo;
     align-content: end;
     font-family: 'Neufreit';
     font-size: 72px;
+    animation-name: logoFrames;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
   }
-  
+  @keyframes logoFrames{
+    0% {opacity: 0%;}
+    25% {opacity: 25%;}
+    50% {opacity: 50%;}
+    100% {opacity: 100%;}
+  }
+  /* USDA grid */
   #usda {
     grid-area: usda;
     background-image: url("../images/usda.png");
+    animation-name: usdaFrames;
+    animation-timing-function: ease;
+    animation-duration: 2s;
   }
-  
+  @keyframes usdaFrames{
+    0% {opacity: 0%; transform:translateY(55%);}
+    25% {opacity: 25%;}
+    50% {opacity: 50%;}
+    100% {opacity: 100%; transform:translateY(0%);}
+  }
+  #usda:hover {
+    margin: 2%;
+  }
+
   #harvest {
     grid-area: harvest;
     background-image: url("../images/harvestapp.png");
+    animation-name: harvestFrames;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+  }
+  @keyframes harvestFrames{
+    0% {opacity: 0%; transform:translateY(80%)}
+    25% {opacity: 25%;}
+    50% {opacity: 50%;}
+    100% {opacity: 100%; transform:translateY(0%)}
+  }
+  #harvest:hover {
+    margin: 2%;
   }
 
   #portier {
     grid-area: portier;
     background-image: url("../images/portierapp.png");
+    animation-name: portierFrames;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+  }
+
+  @keyframes portierFrames{
+    0% {opacity: 0%; transform:translateY(100%)}
+    25% {opacity: 25%;}
+    50% {opacity: 50%;}
+    100% {opacity: 100%; transform:translateY(0%)}
+  }
+  #portier:hover {
+    margin: 2%;
   }
 
   #artRoom {
     grid-area: artRoom;
     background-image: url("../images/artRoom.png");
+    animation-name: artRoomFrames;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+  }
+  @keyframes artRoomFrames{
+    0% {opacity: 0%; transform:translateY(80%)}
+    25% {opacity: 25%;}
+    50% {opacity: 50%;}
+    100% {opacity: 100%; transform:translateY(0%)}
+  }
+  #artRoom:hover {
+    margin: 2%;
   }
   .categoryGridArea {
     background-position: center;

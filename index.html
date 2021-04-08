@@ -3,15 +3,28 @@
 <head>
     <title>Portfolio Homepage</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/index.js"></script>
 </head>
 
 <body>
     <!-- Nav HTML -->
+    <header>
+      <div class="menuOption"><span onclick="openNav()"><img src="images/menu.jpg" height="20">menu</span>
+      </div>
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" class="close" onclick="closeNav()"><img src="images/close.png" height="32">close</a>
+            <div class="overlay-contentTabs">
+              <a href="#" class="menuText" style=font-size:125px;>about.</a>
+              <a href="#" class="menuText" style=font-size:125px;>projects.</a>
+              <a href="#" class="contact" style=font-size:125px;>contact.</a>
+            </div>
+        </div>
+    </header>
     <!-- Body HTML -->
     <section id="categoryGrid">
-        <a href="#menu" id="menu" class="categoryGridArea">
-          <div class="heading"><img src="images/menu.jpg" height="20">menu</div>
-        </a>
+        <div class="#menu" id="menuOption" class="categoryGridArea">
+          <div class="heading"></div>
+        </div>
         <div id="brand" class="categoryGridArea">
           <div class="heading"><img src="images/brand.png" height="300"></div>
         </div>
@@ -19,16 +32,17 @@
           <div class="heading">amy shin.</div>
         </div>
         <div id="usda" class="categoryGridArea">
-          <div class="heading"></div>
+          <a href="#"></a>
+          </div>
         </div>
         <div id="harvest" class="categoryGridArea">
-          <div class="heading"></div>
+          <a href="#"></a>
         </div>
         <div id="portier" class="categoryGridArea">
-          <div class="heading"></div>
+          <a href="#"></a>
         </div>
         <div id="artRoom" class="categoryGridArea">
-          <div class="heading"></div>
+          <a href="#"></a>
         </div>
     </section>
     <!-- footer HTML -->
